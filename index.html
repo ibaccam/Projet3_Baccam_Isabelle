@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./Sass/style.css"/>
     <title>ohmyfood</title>
     <script src="https://kit.fontawesome.com/0e345dd9bc.js" crossorigin="anonymous"></script>
 </head>
@@ -14,13 +14,11 @@
     
     <!--Header-->
     <header id="header">
-        <div class="logo">
-            <img src="./images/logo/ohmyfood.png" alt="logo">
-        </div>
-        <div id="location-bar">
+        <h1 class="header__logo">ohmyfood</h1>
+        <div class="header__location">
             <i class="fa-solid fa-location-dot"></i>
-            <input type="search"placeholder="Paris, Belleville">
-    </div>
+            <input type="search" placeholder="Paris, Belleville">
+        </div>
     </header>
 
     <!--Description-->
@@ -28,7 +26,7 @@
         <h2>Réserver le menu qui vous convient</h2>
         <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
         <a href="#">
-            <button type="submit" class="button-description">Explorer nos restaurants</button>
+            <div class="button-description">Explorer nos restaurants</div>
         </a>
     </section>
 
@@ -37,22 +35,29 @@
         <h2>Fonctionnement</h2>
         <nav>            
             <ul>
-                <li>
-                    <i class="icon-1 fa-solid fa-1"></i>
-                    <i class="icon-2 fa-solid fa-mobile-screen-button"></i>
-                    <a href="#Choisir">Choisissez un restaurant</a>
+                <li class="nav__selection">
+                    <a href="#Choisir">
+                        <div class="nav__selection--nombre"><i class="icon-1 fa-solid fa-1"></i></div>
+                        <div class="nav__selection--icone"><i class="icon-2 fa-solid fa-mobile-screen-button"></i></div>
+                        <div class="nav__selection--texte"><h3>Choisissez un restaurant</h3></div>
+                    </a>
                 </li>
-                <li>
-                    <i class="icon-1 fa-solid fa-2"></i>
-                    <i class="icon-2 fa-solid fa-list-ul"></i>
-                    <a href="#Composer">Composez votre menu</a>
+                <li class="nav__selection">
+                    <a href="#Composer">
+                        <div class="nav__selection--nombre"><i class="icon-1 fa-solid fa-2"></i></div>
+                        <div class="nav__selection--icone"><i class="icon-2 fa-solid fa-list-ul"></i></div>
+                        <div class="nav__selection--texte"><h3>Composez votre menu</h3></div>
+                    </a>
                 </li>
-                <li>
-                    <i class="icon-1 fa-solid fa-3"></i>
-                    <i class="icon-2 fa-solid fa-store"></i>
-                    <a href="#Déguster">Dégustez au restaurant</a>
+                <li class="nav__selection">
+                    <a href="#Déguster">
+                        <div class="nav__selection--nombre"><i class="icon-1 fa-solid fa-3"></i></div>
+                        <div class="nav__selection--icone"><i class="icon-2 fa-solid fa-store"></i></div>
+                        <div class="nav__selection--texte"><h3>Dégustez au restaurant</h3></div>
+                    </a>
                 </li>
             </ul>
+        </nav>      
     </section>
 
     <!--Main-->
@@ -113,15 +118,26 @@
     <!--Footer-->
     <footer>
     <div id="footer">
-        <h2>ohmyfood</h2>
+        <h2 class="footer__logo">ohmyfood</h2>
         <div class="footer__description">
             <ul>
-                <li>
-                    <i class="icon-4 fa-solid fa-utensils"></i>Proposer un restaurant</li>
-                <li>
-                    <i class="icon-4 fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li><a href="Mailto">Contact</a></li>
+                <li class="footer__menu">
+                    <i class="icon-4 fa-solid fa-utensils"></i>
+                    <h4>Proposer un restaurant</h4>
+                </li>
+                <li class="footer__menu">
+                    <i class="icon-4 fa-solid fa-handshake-angle"></i>
+                    <h4>Devenir partenaires</h4>
+                </li>
+                <li class="footer__menu">
+                    <h4>Mentions légales</h4>
+                </li>
+                <li class="footer__menu">
+                    <a href="Mailto">
+                        <h4>Contact</h4>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
     </Footer>
