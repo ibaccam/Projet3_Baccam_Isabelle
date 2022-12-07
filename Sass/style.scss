@@ -27,54 +27,64 @@ ul {
   padding: 0px;
 }
 
-.header{
+.Header {
+  width:100%;
   display: flex;
-  flex-wrap: wrap;
-    
-    &__logo {
-      font-family: 'Shrikhand',cursive;
-      font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  margin:0%;
+
+  &__logo {
+    font-family: 'Shrikhand',cursive;
+    font-size: 30px;
+  }
+}
+  
+
+.Localisation {
+  width:100%;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  background-color: #f3f3f3;
+  border-top: 2px solid #7a7a7a;
+  padding:10px;
+  display: flex;
+  
+    &__recherche{
+     display: flex;
+      justify-content: center;
     }
 
-    &__logo,&__location {
-      width:100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin:0%;
+    .fa-location-dot{
+      margin:0px 5px 0px 5px;
     }
-    
-    &__location {
-      background-color: #f3f3f3;
-      border-top: 2px solid #7a7a7a;
-      padding:10px;
-     }
-  }
-  .fa-location-dot{
-    margin:0px 5px 0px 5px;
-  }
-  input[type="search"] {
+
+    input[type="search"] {
     border:none;
     background-color: #f3f3f3;
-    width:30%;
-  }
+    width:75%;
+    text-align: center;
+    }
+  
+}
 
-  #description {
+  .Description {
     width:100%;
     margin: 0%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 
-    h2, p, .button-description{
+    .Description {
       text-align: center;
       width: 100%;
       margin: 0%;
     }
   }
 
-  #Fonctionnement {
-    .nav__selection a{
+  .Fonctionnement {
+    .Fonctionnement__selection {
       width:100%;
       display: flex;
       align-items: center;
@@ -85,10 +95,7 @@ ul {
       margin: 10px 20px;
       border-radius: 20px;
       position: relative;
-      
-    }
-
-      .nav__selection {
+     
         &--nombre{
           background-color: #9356DC;
           color: white;
