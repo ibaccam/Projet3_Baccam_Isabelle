@@ -21,7 +21,7 @@
       }
   }
   
-  
+ 
 ul {
   list-style-type: none;
   padding: 0px;
@@ -132,7 +132,7 @@ ul {
 
 .Main{
   width:100%;
-  height:1700px;
+  height:1400px;
 }
 
 .Restaurants {
@@ -151,44 +151,82 @@ ul {
 
     &__Card {
       width: 100%;
-      height:300px;
+      height:290px;
       border-radius: 20px;
       box-shadow: 5px 2px 10px 2px red;
+      margin: 20px 0px 20px 0px;
     }
 
       &__Card--image {
         border-radius: 20px 20px 0px 0px;
         border: 5px solid #ffffff;
-        height:70%;
+        height:72%;
         object-fit: cover;
+        position: relative;
         }
 
         &__Card--image img {
           width: 100%;
-          height:90%;
+          height:100%;
           object-fit: cover;
           border-radius: 20px 20px 0px 0px;
         }
-    
-        &__Card--descriptif {
-        height:20%;
+
+        &__Card--image p {
+          width: 25%;
+          position: absolute;
+          top:8%;
+          right:0%;
+          background-color: green;
+          text-align: center;
+          padding: 8px;
+          margin: 10px;
+
         }
 
+        &__Card--descriptif {
+          height:10%;
+          display:flex;
+        }
+
+        &__Card--descriptif--texte {
+          width:50%;
+        } 
+
+         &__Card--descriptif--texte,h3, p{
+            margin:5px
+          }
+
           &__Card--descriptif--heart {
+            width:50%;
             display: flex;
             justify-content: flex-end;
-            align-content: center;
-            width:25%
-          }   
+        } 
 
       .fa-heart {
       color: #0065fc;
-      font-size: 12px;
+      font-size: 37px;
     }
 
       .plein {
       color: #f2f2f2;
-      font-size: 12px;
+      font-size: 37px;
       display: flex;
+    }
+}
+
+/* Footer */
+.footer{
+  background-color: #444242;
+  font-size: 17px;
+  color: #ffffff;
+
+    &__logo{
+      font-family: 'Shrikhand',cursive;
+    }
+
+    &__menu{
+      display: flex;
+      align-items: center;
     }
 }

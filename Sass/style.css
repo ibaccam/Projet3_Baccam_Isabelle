@@ -114,7 +114,7 @@ ul {
 /* Main */
 .Main {
   width: 100%;
-  height: 1700px;
+  height: 1400px;
 }
 
 .Restaurants {
@@ -131,39 +131,71 @@ ul {
 }
 .Restaurants__Card {
   width: 100%;
-  height: 300px;
+  height: 290px;
   border-radius: 20px;
   box-shadow: 5px 2px 10px 2px red;
+  margin: 20px 0px 20px 0px;
 }
 .Restaurants__Card--image {
   border-radius: 20px 20px 0px 0px;
   border: 5px solid #ffffff;
-  height: 70%;
+  height: 72%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
 }
 .Restaurants__Card--image img {
   width: 100%;
-  height: 90%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
+.Restaurants__Card--image p {
+  width: 25%;
+  position: absolute;
+  top: 8%;
+  right: 0%;
+  background-color: green;
+  text-align: center;
+  padding: 8px;
+  margin: 10px;
+}
 .Restaurants__Card--descriptif {
-  height: 20%;
+  height: 10%;
+  display: flex;
+}
+.Restaurants__Card--descriptif--texte {
+  width: 50%;
+}
+.Restaurants__Card--descriptif--texte, .Restaurants h3, .Restaurants p {
+  margin: 5px;
 }
 .Restaurants__Card--descriptif--heart {
+  width: 50%;
   display: flex;
   justify-content: flex-end;
-  align-content: center;
-  width: 25%;
 }
 .Restaurants .fa-heart {
   color: #0065fc;
-  font-size: 12px;
+  font-size: 37px;
 }
 .Restaurants .plein {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 37px;
   display: flex;
+}
+
+/* Footer */
+.footer {
+  background-color: #444242;
+  font-size: 17px;
+  color: #ffffff;
+}
+.footer__logo {
+  font-family: "Shrikhand", cursive;
+}
+.footer__menu {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
