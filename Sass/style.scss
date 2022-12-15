@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/keyframes";
+
+@import "./base/base.scss";
+@import "./base/typography.scss";
+
+
+
+@import "./layout/header.scss";
+@import "./layout/card.scss";
+@import "./layout/menu.scss";
+@import "./layout/footer.scss";
+
+@import "./pages/accueil.scss";
+@import "./pages/restaurants.scss";
 
 * {
     box-sizing: border-box;
@@ -27,6 +43,16 @@ ul {
   padding: 0px;
 }
 
+
+/* Loader */
+
+.loader {
+  @include loader;
+  }
+
+
+
+  
 /* Header */
 
 .Header {
@@ -96,11 +122,16 @@ ul {
     }
 
     &__button-menu {
-      background:#9356DC;
+      background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
       color: #ffffff;
       font-size: 16px;
       border-radius: 25px;
       padding:12px 25px 12px 25px;
+      transform: scale(1);                  /* répétition */
+      transition: transform 400ms;
+        &:hover {
+          transform: scale(1.1);
+        }
     }
 }
 
@@ -113,15 +144,24 @@ ul {
     display: flex;
     align-items: center;
     background: #f6f6f6;
-    width: auto;
-    margin: 23px 10px;
+    width: 95%;
+    margin: 25px;
     border-radius: 20px;
     position: relative;
     padding:9px 25px;
     box-shadow: 0 6px 8px 0 gainsboro;
+    transform: scale(1);                      /* répétition */
+    transition: transform 400ms;
+      &:hover {
+        transform: scale(1.1);
+        background-color: rgba(194, 180, 237, 0.3);
+        i {
+          color: #9356DC;               /* utils/variables */
+        }      
+      }
          
       &--nombre{
-        background-color: #9356DC;
+        background-color: #9356DC;               /* utils/variables */
         color: #ffffff;
         position: absolute;
         top: 25px;
@@ -172,8 +212,9 @@ ul {
     }
 
     &__Liste a {
-      width:100%;
+      width:95%;
       height:265px;
+      margin:15px;
     }
 
     &__Card {
@@ -181,6 +222,11 @@ ul {
       border-radius: 20px;
       background-color:white;
       box-shadow: 5px 2px 10px 2px #f0f2f6;
+      transform: scale(1);                      /* répétition */
+      transition: transform 400ms;
+        &:hover {
+          transform: scale(1.1);
+        }
     }
 
       &__Card--image {
@@ -237,21 +283,8 @@ ul {
           align-items: center;
           position: relative;
           justify-content: center;
-        } 
-
-      .fa-heart {
-      color: #0065fc;
-      font-size: 25px;
-      }
-    
-      .vide {
-        position: absolute;
-        }
-
-      .plein {
-        color: #f2f2f2;
-        }
-      
+          @include heart;
+        }    
     }
 
 /* Footer */

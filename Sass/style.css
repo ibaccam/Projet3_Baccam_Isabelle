@@ -1,5 +1,44 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@-webkit-keyframes custom-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes custom-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: "Roboto";
@@ -22,6 +61,74 @@ a:visited {
 ul {
   list-style-type: none;
   padding: 0px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  color: #000000;
+}
+
+#bloc-page {
+  max-width: 768px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #000000;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+/* Loader */
+.loader {
+  background: #f4ebeb;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  -webkit-animation: loader 1s ease-in-out 3s forwards;
+          animation: loader 1s ease-in-out 3s forwards;
+}
+.loader .custom-loading-spinner {
+  cursor: progress;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.loader .custom-loading-spinner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10001;
+  overflow: hidden;
+  background: #0b0b0b;
+  opacity: 0.6;
+}
+.loader .custom-loading-spinner::after {
+  box-sizing: border-box;
+  z-index: 10002;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  border: 3px solid #FF79DA;
+  border-top: 3px solid #9356DC;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: custom-loading 1s linear infinite;
+          animation: custom-loading 1s linear infinite;
 }
 
 /* Header */
@@ -95,11 +202,16 @@ ul {
   font-weight: 300;
 }
 .Description__button-menu {
-  background: #9356DC;
+  background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   color: #ffffff;
   font-size: 16px;
   border-radius: 25px;
   padding: 12px 25px 12px 25px;
+  transform: scale(1); /* répétition */
+  transition: transform 400ms;
+}
+.Description__button-menu:hover {
+  transform: scale(1.1);
 }
 
 /* Fonctionnement */
@@ -110,15 +222,24 @@ ul {
   display: flex;
   align-items: center;
   background: #f6f6f6;
-  width: auto;
-  margin: 23px 10px;
+  width: 95%;
+  margin: 25px;
   border-radius: 20px;
   position: relative;
   padding: 9px 25px;
   box-shadow: 0 6px 8px 0 gainsboro;
+  transform: scale(1); /* répétition */
+  transition: transform 400ms;
+}
+.Fonctionnement__selection:hover {
+  transform: scale(1.1);
+  background-color: rgba(194, 180, 237, 0.3);
+}
+.Fonctionnement__selection:hover i {
+  color: #9356DC; /* utils/variables */
 }
 .Fonctionnement__selection--nombre {
-  background-color: #9356DC;
+  background-color: #9356DC; /* utils/variables */
   color: #ffffff;
   position: absolute;
   top: 25px;
@@ -162,14 +283,20 @@ ul {
   justify-content: center;
 }
 .Restaurants__Liste a {
-  width: 100%;
+  width: 95%;
   height: 265px;
+  margin: 15px;
 }
 .Restaurants__Card {
   height: 100%;
   border-radius: 20px;
   background-color: white;
   box-shadow: 5px 2px 10px 2px #f0f2f6;
+  transform: scale(1); /* répétition */
+  transition: transform 400ms;
+}
+.Restaurants__Card:hover {
+  transform: scale(1.1);
 }
 .Restaurants__Card--image {
   border-radius: 20px 20px 0px 0px;
@@ -219,15 +346,17 @@ ul {
   position: relative;
   justify-content: center;
 }
-.Restaurants .fa-heart {
-  color: #0065fc;
+.Restaurants__Card--descriptif--heart .fa-heart {
+  color: black;
   font-size: 25px;
 }
-.Restaurants .vide {
-  position: absolute;
-}
-.Restaurants .plein {
-  color: #f2f2f2;
+.Restaurants__Card--descriptif--heart .fa-heart:hover {
+  -webkit-animation: fill 0.3s ease-in-out;
+          animation: fill 0.3s ease-in-out;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 /* Footer */
