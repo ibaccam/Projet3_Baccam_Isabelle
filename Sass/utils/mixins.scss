@@ -41,19 +41,97 @@
       
 }
 
+
+@mixin sélection {
+&__selection {
+    display: flex;
+    align-items: center;
+    background: #f6f6f6;
+    width: 95%;
+    margin: 25px;
+    border-radius: 20px;
+    position: relative;
+    padding:9px 25px;
+    box-shadow: 0 6px 8px 0 gainsboro;
+    transform: scale(1);                      /* répétition */
+    transition: transform 400ms;
+      &:hover {
+        transform: scale(1.1);
+        background-color: rgba(194, 180, 237, 0.3);
+        i {
+          color: $colour-primary;              
+        }      
+      }
+         
+      &--nombre{
+        background-color: $colour-primary;               
+        color: #ffffff;
+        position: absolute;
+        top: 25px;
+        left:-16px;
+        padding: 5.5px 9px 5.5px 9px;
+        border-radius: 50px;
+        font-size: 12px;
+      }
+        
+        &--icone{
+          padding:0 10px 0px 10px;
+          font-size:larger;
+        }
+        
+        &--texte{
+          padding:0 10px 0px 10px;
+          font-size: 14px;
+        }
+        
+    @include media-min($tablet) {
+        width: 100%;
+            }
+    
+    
+    @include media-min($desktop) {
+        width: 23%;
+    }
+}
+}
+
+    
+
+@mixin dégradé {
+    background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+}
+
 @mixin heart {
     .fa-heart {
         color:black;
         font-size: 25px;
             
          &:hover {
-            animation: fill 0.3s ease-in-out;
+            animation: fill 0.3s linear;
             background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-            -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
         }
     }
 }
 
+
+/* Responsive*/
+
+@mixin media-max($_max-width) {
+    @media screen and (max-width: $_max-width) {
+        &{ @content; }
+    }
+}
+@mixin media-min($_min-width) {
+    @media screen and (min-width: $_min-width) {
+        &{ @content; }
+    }
+}
+@mixin media-inter($_min-width,$_max-width) {
+    @media screen and (min-width: $_min-width) and (max-width: $_max-width) {
+        &{ @content; }
+    }
+}
     

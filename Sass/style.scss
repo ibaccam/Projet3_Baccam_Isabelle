@@ -36,12 +36,16 @@
         color: #000000;
       }
   }
+
+  h2 {
+    font-size: 24px;
+  }
   
  
-ul {
+  ul {
   list-style-type: none;
   padding: 0px;
-}
+  }
 
 
 /* Loader */
@@ -49,8 +53,6 @@ ul {
 .loader {
   @include loader;
   }
-
-
 
   
 /* Header */
@@ -122,7 +124,7 @@ ul {
     }
 
     &__button-menu {
-      background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      @include dégradé;
       color: #ffffff;
       font-size: 16px;
       border-radius: 25px;
@@ -138,49 +140,23 @@ ul {
 /* Fonctionnement */
 
 .Fonctionnement {
+  
   padding: 25px 15px 25px 15px;
+      
+  @include media-min($desktop) {
+      display: flex;
+      align-items: center;
+            flex-wrap: wrap;
 
-  &__selection {
-    display: flex;
-    align-items: center;
-    background: #f6f6f6;
-    width: 95%;
-    margin: 25px;
-    border-radius: 20px;
-    position: relative;
-    padding:9px 25px;
-    box-shadow: 0 6px 8px 0 gainsboro;
-    transform: scale(1);                      /* répétition */
-    transition: transform 400ms;
-      &:hover {
-        transform: scale(1.1);
-        background-color: rgba(194, 180, 237, 0.3);
-        i {
-          color: #9356DC;               /* utils/variables */
-        }      
+      &__selection1{
+        width:100%;
+        display: flex;    
+        justify-content: space-around;  
       }
-         
-      &--nombre{
-        background-color: #9356DC;               /* utils/variables */
-        color: #ffffff;
-        position: absolute;
-        top: 25px;
-        left:-16px;
-        padding: 5.5px 9px 5.5px 9px;
-        border-radius: 50px;
-        font-size: 12px;
-      }
-        
-        &--icone{
-          padding:0 10px 0px 10px;
-          font-size:larger;
-        }
-        
-        &--texte{
-          padding:0 10px 0px 10px;
-          font-size: 14px;
-        }
-    }
+  }
+
+  @include sélection;
+
   }
 
 /* Main */
