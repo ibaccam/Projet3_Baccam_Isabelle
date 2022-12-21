@@ -1,0 +1,32 @@
+.footer{
+background-color: #393939;
+padding: 20px; 
+ 
+    &__logo {
+        font-family: 'Shrikhand',cursive;
+        font-size: 20px;
+        font-weight: 270;
+        color: #ffffff;
+        margin: 0%;   
+      }
+  
+    &__menu {
+        display: flex;
+        align-items: center;
+  
+  
+        h4{
+            font-size: 17px;
+            color: #ffffff;
+            font-weight: 300;
+            margin: 0%;
+            line-height:30px;        
+        }
+  
+        &--icone i{
+            font-size:13px;
+            color: #ffffff;
+             margin-right: 10px;  
+        }
+    }
+}
