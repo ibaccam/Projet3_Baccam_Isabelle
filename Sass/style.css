@@ -144,6 +144,7 @@ ul {
 .Header {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 0%;
@@ -163,6 +164,12 @@ ul {
   .Header__arrow {
     top: 7%;
   }
+}
+.Header img {
+  width: 100%;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* Localisation*/
@@ -402,19 +409,17 @@ ul {
   font-weight: bold;
 }
 
+.Menu {
+  background-color: rgb(248, 248, 248);
+  border-radius: 20px 20px 0px 0px;
+}
+
 .Menu__info {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 .Menu__info--titre {
   width: 85%;
-}
-.Menu__info img {
-  width: 100%;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 /* Footer *//*# sourceMappingURL=style.css.map */

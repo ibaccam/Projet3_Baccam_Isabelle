@@ -30,6 +30,7 @@
 .Header {
   width:100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin:0%;
@@ -49,6 +50,12 @@
           top: 7%;
       }
   }
+
+  img{
+    width:100%;
+    height:230px;
+    object-fit: cover;
+}
 
 }
 
@@ -239,9 +246,12 @@
 
 }
 
+.Menu{
+  background-color: $colour-light-grey;
+  border-radius: 20px 20px 0px 0px;
+}
 .Menu__info{
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 
   &--titre{
@@ -249,11 +259,6 @@
 
   }
 
-  img{
-    width:100%;
-    height:200px;
-    object-fit: cover;
-}
 }
 
 
