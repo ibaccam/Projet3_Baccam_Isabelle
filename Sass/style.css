@@ -162,7 +162,7 @@ ul {
 }
 @media screen and (min-width: 992px) {
   .Header__arrow {
-    top: 7%;
+    top: 5%;
   }
 }
 .Header img {
@@ -414,14 +414,85 @@ ul {
   border-radius: 25px 25px 0px 0px;
   position: relative;
   margin-top: -35px;
+  -webkit-animation: fadein 2s ease-in;
+          animation: fadein 2s ease-in;
+  flex-direction: column;
+  transform-origin: top left;
+  position: relative;
+  -webkit-animation: menu 666ms both;
+          animation: menu 666ms both;
 }
-
 .Menu__info {
   display: flex;
   align-items: center;
 }
 .Menu__info--titre {
   width: 85%;
+}
+.Menu__card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  transform-origin: top left;
+  position: relative;
+  -webkit-animation: fadein 2s ease-in;
+          animation: fadein 2s ease-in;
+}
+.Menu__card--choix--type {
+  padding: 0.75rem;
+  margin: 0.4rem;
+  background: #FFF;
+  -webkit-animation: 810ms cubic-bezier(0.1, 0.9, 0.1, 1) both;
+          animation: 810ms cubic-bezier(0.1, 0.9, 0.1, 1) both;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
+  padding-right: 15px;
+}
+.Menu__card--choix--type h4 {
+  font-size: 16px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0%;
+}
+.Menu__card--choix--type--inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.5em;
+}
+.Menu__card--choix--type--inline p {
+  font-weight: 350;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0%;
+}
+.Menu__card--choix--type--inline span {
+  margin-right: 20px;
+  font-size: 0.95rem;
+  color: #464646;
+}
+.Menu__card--choix--type--selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  width: 4rem;
+  height: 4.3rem;
+  position: absolute;
+  right: -65px;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.1, 0, 0.2, 1);
+  opacity: 1;
+  transform: translate(-3rem);
+}
+.Menu__card--choix--type--selection .fa-circle-check {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 500ms ease-in-out;
+  transform: rotate(360deg);
 }
 
 /* Footer *//*# sourceMappingURL=style.css.map */
