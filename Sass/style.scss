@@ -32,7 +32,7 @@
 
   &__logo {
     font-family: 'Shrikhand',cursive;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 300;
   }
 
@@ -40,7 +40,7 @@
       font-size: 1.3rem;
       position: absolute;
       left: 10%;
-      top: 7%;
+      top: 6%;
       @include media-min($desktop) {
           top: 5%;
       }
@@ -250,14 +250,25 @@
   transform-origin: top left;
   position: relative;
   animation: menu 666ms both;
+  padding: 12px 5px 12px 5px;
 
   &__info {
     display: flex;
     align-items: center;
-  
-
+    
     &--titre{
       width:85%;
+      font-size: 28px;
+      letter-spacing: 0.7px;
+      font-family: "Shrikhand", cursive;
+      font-weight: 700;
+      margin:12px;
+    }
+
+    &--heart{
+      font-size: 28px;
+      margin: 0px 40px 0px 40px;
+      @include heart;
     }
   }
   
@@ -268,10 +279,22 @@
     transform-origin: top left;
     position: relative;
     animation: fadein 2s ease-in;
+
+    h3 {
+      
+      text-transform: uppercase;
+      font-weight: 370;
+      font-size: 15px;
+      margin:3px 12px 3px 12px;
+      padding:5px 0px 5px 0px;
+      border-bottom: solid 3px $colour-tertiary;
+      width: 10%;    
+    }     
+    
    
     &--choix--type{
-      padding: .75rem;
-      margin: 0.4rem;
+      padding: 11px;
+      margin: 11px;
       background: $colour-white;
       animation: 810ms cubic-bezier(.1,.9,.1,1) both;
       position: relative;
@@ -279,6 +302,7 @@
       box-shadow: 0 3px 7px 0 rgb(0 0 0 / 20%);
       padding-right: 15px;
       
+
       h4 {
         font-size: 16px;
         font-weight: 400;
@@ -286,7 +310,8 @@
         overflow: hidden;
         margin: 0%;
       }
-  
+
+       
       &--inline {
         display: flex;
         justify-content: space-between;
@@ -307,7 +332,7 @@
           color: darken($colour-light-grey, 70%);
         }
       }
-
+  
       &--selection {
         display: flex;
         justify-content: center;
@@ -316,22 +341,41 @@
         width: 4rem;
         height: 4.3rem;
         position: absolute;
-        right: -65px;
+        right: -50px;
         top: 0;
-        transition: all 0.5s cubic-bezier(0.1, 0, 0.2, 1);
-        opacity: 1;
-        transform: translate(-3rem);
-
+        opacity: 0;
+        transition: transform 330ms ease-in-out;
+          &:hover {
+            opacity: 1;
+            transform: translate(-3rem);
+          }
+        
         & .fa-circle-check {
           color: #fff;
           font-size: 1.5rem;
           transition: transform 500ms ease-in-out;
-          transform: rotate(360deg) 
+          transform: rotate(360deg);
         }
       }
     }
   }
+  
+    
+  &__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  &__button--commander {
+    @include button;
+    @include dégradé;
+    width: 50%;
+    padding: 15px;
+    text-align: center;  
+  }
 }
+
 
 
 

@@ -151,14 +151,14 @@ ul {
 }
 .Header__logo {
   font-family: "Shrikhand", cursive;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 300;
 }
 .Header__arrow {
   font-size: 1.3rem;
   position: absolute;
   left: 10%;
-  top: 7%;
+  top: 6%;
 }
 @media screen and (min-width: 992px) {
   .Header__arrow {
@@ -235,6 +235,7 @@ ul {
   padding: 12px 25px 12px 25px;
   transform: scale(1);
   transition: transform 400ms;
+  box-shadow: 0 6px 8px 0 grey;
   background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
 }
 .Description__button--menu:hover {
@@ -398,6 +399,7 @@ ul {
 .Restaurants__Card--descriptif--heart .fa-heart {
   color: black;
   font-size: 25px;
+  font-weight: 100;
 }
 .Restaurants__Card--descriptif--heart .fa-heart:hover {
   -webkit-animation: fill 0.3s linear;
@@ -421,6 +423,7 @@ ul {
   position: relative;
   -webkit-animation: menu 666ms both;
           animation: menu 666ms both;
+  padding: 12px 5px 12px 5px;
 }
 .Menu__info {
   display: flex;
@@ -428,6 +431,29 @@ ul {
 }
 .Menu__info--titre {
   width: 85%;
+  font-size: 28px;
+  letter-spacing: 0.7px;
+  font-family: "Shrikhand", cursive;
+  font-weight: 700;
+  margin: 12px;
+}
+.Menu__info--heart {
+  font-size: 28px;
+  margin: 0px 40px 0px 40px;
+}
+.Menu__info--heart .fa-heart {
+  color: black;
+  font-size: 25px;
+  font-weight: 100;
+}
+.Menu__info--heart .fa-heart:hover {
+  -webkit-animation: fill 0.3s linear;
+          animation: fill 0.3s linear;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 .Menu__card {
   display: flex;
@@ -438,9 +464,18 @@ ul {
   -webkit-animation: fadein 2s ease-in;
           animation: fadein 2s ease-in;
 }
+.Menu__card h3 {
+  text-transform: uppercase;
+  font-weight: 370;
+  font-size: 15px;
+  margin: 3px 12px 3px 12px;
+  padding: 5px 0px 5px 0px;
+  border-bottom: solid 3px #99E2D0;
+  width: 10%;
+}
 .Menu__card--choix--type {
-  padding: 0.75rem;
-  margin: 0.4rem;
+  padding: 11px;
+  margin: 11px;
   background: #FFF;
   -webkit-animation: 810ms cubic-bezier(0.1, 0.9, 0.1, 1) both;
           animation: 810ms cubic-bezier(0.1, 0.9, 0.1, 1) both;
@@ -482,9 +517,12 @@ ul {
   width: 4rem;
   height: 4.3rem;
   position: absolute;
-  right: -65px;
+  right: -50px;
   top: 0;
-  transition: all 0.5s cubic-bezier(0.1, 0, 0.2, 1);
+  opacity: 0;
+  transition: transform 330ms ease-in-out;
+}
+.Menu__card--choix--type--selection:hover {
   opacity: 1;
   transform: translate(-3rem);
 }
@@ -493,6 +531,28 @@ ul {
   font-size: 1.5rem;
   transition: transform 500ms ease-in-out;
   transform: rotate(360deg);
+}
+.Menu__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.Menu__button--commander {
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 12px 25px 12px 25px;
+  transform: scale(1);
+  transition: transform 400ms;
+  box-shadow: 0 6px 8px 0 grey;
+  background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  width: 50%;
+  padding: 15px;
+  text-align: center;
+}
+.Menu__button--commander:hover {
+  transform: scale(1.1);
 }
 
 /* Footer *//*# sourceMappingURL=style.css.map */
