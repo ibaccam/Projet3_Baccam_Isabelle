@@ -48,7 +48,7 @@
     align-items: center;
     background: #f6f6f6;
     width: 94%;
-    margin: 25px;
+    margin: 25px 15px 25px 15px;
     border-radius: 20px;
     position: relative;
     padding:9px 25px;
@@ -119,8 +119,8 @@
         font-weight: 100;
             
          &:hover {
-            animation: fill 0.3s linear;
-            background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+            transition: all 250ms ease-in-out;
+            background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
             background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
