@@ -39,36 +39,6 @@
     opacity: 0;
   }
 }
-@-webkit-keyframes choix {
-  0% {
-    transform: scale(0, 0.07);
-  }
-  33% {
-    transform: scale(1, 0.07);
-    -webkit-animation-timing-function: cubic-bezier(0.73, 0.01, 0.2, 0.99);
-            animation-timing-function: cubic-bezier(0.73, 0.01, 0.2, 0.99);
-  }
-}
-@keyframes choix {
-  0% {
-    transform: scale(0, 0.07);
-  }
-  33% {
-    transform: scale(1, 0.07);
-    -webkit-animation-timing-function: cubic-bezier(0.73, 0.01, 0.2, 0.99);
-            animation-timing-function: cubic-bezier(0.73, 0.01, 0.2, 0.99);
-  }
-}
-@-webkit-keyframes type {
-  0% {
-    transform: translateX(-110%);
-  }
-}
-@keyframes type {
-  0% {
-    transform: translateX(-110%);
-  }
-}
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -536,47 +506,72 @@ ul {
 }
 .Menu__card--choix {
   transform-origin: top;
-  position: relative;
-  -webkit-animation: 0.5s ease-out both, fadein 2s ease-in;
-          animation: 0.5s ease-out both, fadein 2s ease-in;
-}
-.Menu__card--choix--type {
   padding: 11px;
   margin: 11px;
   background: #FFF;
-  -webkit-animation: choix 1s ease-in-out both;
-          animation: choix 1s ease-in-out both;
+  -webkit-animation: 0.5s ease-out both, fadein 2s both;
+          animation: 0.5s ease-out both, fadein 2s both;
   position: relative;
   border-radius: 15px;
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
   padding-right: 15px;
 }
-.Menu__card--choix--type h4 {
-  font-size: 16px;
-  font-weight: 400;
+.Menu__card--choix:hover .Menu__card--choix--selection {
+  opacity: 1;
+  transform: translate(-3rem);
+  transition: all 0.5s cubic-bezier(0.1, 0, 0.2, 1);
+}
+.Menu__card--choix:hover .fa-circle-check {
+  transform: rotate(360deg);
+  transition: transform 500ms ease-in-out;
+}
+.Menu__card--choix:hover .Menu__card--choix--inline {
+  width: 90%;
+  transition: all 0.5s cubic-bezier(0.1, 0, 0.2, 1);
+}
+.Menu__card--choix:hover .Menu__card--choix--inline p {
+  width: 75%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.Menu__card--choix h4 {
+  font-size: 19px;
+  font-weight: 500;
   text-overflow: ellipsis;
   overflow: hidden;
   margin: 0%;
 }
-.Menu__card--choix--type--inline {
+.Menu__card--choix--1 {
+  -webkit-animation-delay: 546ms;
+          animation-delay: 546ms;
+}
+.Menu__card--choix--2 {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+.Menu__card--choix--3 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+.Menu__card--choix--inline {
   display: flex;
   justify-content: space-between;
   align-items: center;
   line-height: 1.5em;
 }
-.Menu__card--choix--type--inline p {
+.Menu__card--choix--inline p {
   font-weight: 350;
-  font-size: 13px;
+  font-size: 16px;
   text-overflow: ellipsis;
   overflow: hidden;
   margin: 0%;
 }
-.Menu__card--choix--type--inline span {
+.Menu__card--choix--inline span {
   margin-right: 20px;
   font-size: 0.95rem;
   color: #464646;
 }
-.Menu__card--choix--type--selection {
+.Menu__card--choix--selection {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -588,25 +583,18 @@ ul {
   border-radius: 0px 15px 15px 0px;
   top: 0;
   opacity: 0;
-  transition: transform 330ms ease-in-out;
 }
-.Menu__card--choix--type--selection:hover {
-  opacity: 1;
-  transform: translate(-3rem);
-}
-.Menu__card--choix--type--selection .fa-circle-check {
-  transform: rotate(360deg);
-  transition: transform 500ms ease-in-out;
+.Menu__card--choix--selection .fa-circle-check {
   color: #fff;
   font-size: 22px;
 }
-.Menu__button {
+.Menu__card__button {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px;
 }
-.Menu__button--commander {
+.Menu__card__button--commander {
   color: #ffffff;
   font-size: 16px;
   border-radius: 25px;
@@ -619,7 +607,7 @@ ul {
   padding: 15px;
   text-align: center;
 }
-.Menu__button--commander:hover {
+.Menu__card__button--commander:hover {
   transform: scale(1.1);
 }
 

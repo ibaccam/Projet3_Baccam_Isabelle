@@ -300,8 +300,7 @@
     justify-content: space-between;
     flex-direction: column;
     position: relative;
-    
-    
+        
     h3 {
       
       text-transform: uppercase;
@@ -311,34 +310,65 @@
       padding:5px 0px 5px 0px;
       border-bottom: solid 3px $colour-tertiary;
       width: 35px;    
-    }     
+    }
+
     &--choix{
     transform-origin:top;
-    position: relative;
-    animation: 0.5s ease-out both, fadein 2s ease-in;
-    
-    }
-   
-    &--choix--type{
       padding: 11px;
       margin: 11px;
       background: $colour-white;
-      animation: choix 1s ease-in-out both;
+      animation:  0.5s ease-out both, fadein 2s both;
       position: relative;
       border-radius: 15px;
       box-shadow: 0 3px 7px 0 rgb(0 0 0 / 20%);
       padding-right: 15px;
+
+          &:hover {
+            & .Menu__card--choix--selection{
+              opacity: 1;
+              transform: translate(-3rem);
+              transition: all 0.5s cubic-bezier(0.1, 0, 0.2, 1);
+            }
+            
+            & .fa-circle-check {  
+              transform: rotate(360deg);
+              transition: transform 500ms ease-in-out;
+            }
+            & .Menu__card--choix--inline {
+              width :90%;
+              transition: all 0.5s cubic-bezier(0.1, 0, 0.2, 1);
+              p{
+                width:75%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+              }
+            }
+          
       
 
       h4 {
-        font-size: 16px;
-        font-weight: 400;
+        font-size: 19px;
+        font-weight: 500;
         text-overflow: ellipsis;
         overflow: hidden;
         margin: 0%;
       }
 
-       
+      &--1 {
+        
+        animation-delay: 546ms;
+      }
+      &--2 {
+        
+        animation-delay: 900ms;
+      }
+      &--3 {
+        
+        animation-delay: 1000ms;
+      }
+
+
       &--inline {
         display: flex;
         justify-content: space-between;
@@ -348,10 +378,11 @@
 
         p {
           font-weight: 350;
-          font-size: 13px;
+          font-size: 16px;
           text-overflow: ellipsis;
           overflow: hidden;
           margin:0%;
+          
         }
         span {
           margin-right: 20px;
@@ -372,21 +403,18 @@
         border-radius: 0px 15px 15px 0px;
         top: 0;
         opacity: 0;
-        transition: transform 330ms ease-in-out;
-          &:hover {
-            opacity: 1;
-            transform: translate(-3rem);
-          }
+        
+
         
         & .fa-circle-check {
-          transform: rotate(360deg);
-          transition: transform 500ms ease-in-out;
           color: #fff;
-          font-size: 22px;           
+          font-size: 22px;     
+          }
         }
       }
-    }
-  }
+    
+  
+
   
     
   &__button{
@@ -403,7 +431,7 @@
     text-align: center;  
   }
 }
-
+}
 
 
 
