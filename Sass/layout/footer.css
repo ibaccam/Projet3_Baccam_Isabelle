@@ -20,6 +20,9 @@
   margin: 0%;
   line-height: 30px;
 }
+.footer__menu--icone {
+  width: 20px;
+}
 .footer__menu--icone i {
   font-size: 13px;
   color: #ffffff;

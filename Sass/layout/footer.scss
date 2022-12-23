@@ -23,10 +23,15 @@ padding: 20px;
             line-height:30px;        
         }
   
-        &--icone i{
-            font-size:13px;
+        &--icone {
+            width:25px; 
+        
+        i{
+            font-size:12px;
             color: #ffffff;
-             margin-right: 10px;  
+            margin-right: 10px;
+
         }
+    }
     }
 }
