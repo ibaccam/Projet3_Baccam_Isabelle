@@ -308,7 +308,7 @@ ul {
   .Menu__liste {
     display: flex;
     height: 75%;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     margin: 20px 0px 20px 0px;
   }
@@ -318,6 +318,11 @@ ul {
   justify-content: space-between;
   flex-direction: column;
   position: relative;
+}
+@media screen and (min-width: 992px) {
+  .Menu__card {
+    width: 31%;
+  }
 }
 .Menu__card h3 {
   text-transform: uppercase;
@@ -358,11 +363,6 @@ ul {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-@media screen and (min-width: 992px) {
-  .Menu__card--choix {
-    width: 100%;
-  }
-}
 .Menu__card--choix h4 {
   font-size: 19px;
   font-weight: 500;
@@ -379,8 +379,12 @@ ul {
           animation-delay: 900ms;
 }
 .Menu__card--choix--3 {
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
+  -webkit-animation-delay: 1200ms;
+          animation-delay: 1200ms;
+}
+.Menu__card--choix--4 {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
 }
 .Menu__card--choix--inline {
   display: flex;

@@ -34,7 +34,7 @@
     @include media-min($desktop) {
       display: flex;
       height:75%;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-around;
       margin:20px 0px 20px 0px;
     }
@@ -45,7 +45,10 @@
       justify-content: space-between;
       flex-direction: column;
       position: relative;
-          
+        @include media-min($desktop) {
+          width:31%;
+        }
+
       h3 {
         
         text-transform: uppercase;
@@ -90,12 +93,7 @@
                   text-overflow: ellipsis;
                   white-space: nowrap;
                 }
-            }
-  
-            @include media-min($desktop) {
-              width:100%;
-            }
-           
+            }       
   
         h4 {
           font-size: 19px;
@@ -115,7 +113,12 @@
         }
         &--3 {
           
-          animation-delay: 1000ms;
+          animation-delay: 1200ms;
+        }
+
+        &--4 {
+          
+          animation-delay: 1500ms;
         }
   
         &--inline {
