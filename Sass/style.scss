@@ -29,10 +29,10 @@
   margin: 0%;
   display: flex;
   justify-content: center;
-  background-color: #f3f3f3;
-  border-top: 2px solid #7a7a7a;
+  background-color: #edecec;
+  box-shadow: inset 2px 7px 9px -9px rgb(115 115 115 / 75%);
   padding:20px;
-  display: flex;
+  
   
     &__recherche{
      display: flex;
@@ -45,7 +45,7 @@
 
     input[type="search"] {
     border:none;
-    background-color: #f3f3f3;
+    background-color: #edecec;
     width:75%;
     text-align: center;
     }

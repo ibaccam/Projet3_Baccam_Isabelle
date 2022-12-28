@@ -39,6 +39,28 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -254,7 +276,8 @@ ul {
   font-weight: 100;
 }
 .Restaurants__Card--descriptif--heart .fa-heart:hover {
-  transition: all 0.3s linear 0s;
+  -webkit-animation: fill 0.9s ease-in-out;
+          animation: fill 0.9s ease-in-out;
   background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   -webkit-background-clip: text;
           background-clip: text;
@@ -297,7 +320,8 @@ ul {
   font-weight: 100;
 }
 .Menu__info--heart .fa-heart:hover {
-  transition: all 0.3s linear 0s;
+  -webkit-animation: fill 0.9s ease-in-out;
+          animation: fill 0.9s ease-in-out;
   background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   -webkit-background-clip: text;
           background-clip: text;
@@ -500,10 +524,9 @@ ul {
   margin: 0%;
   display: flex;
   justify-content: center;
-  background-color: #f3f3f3;
-  border-top: 2px solid #7a7a7a;
+  background-color: #edecec;
+  box-shadow: inset 2px 7px 9px -9px rgba(115, 115, 115, 0.75);
   padding: 20px;
-  display: flex;
 }
 .Localisation__recherche {
   display: flex;
@@ -514,7 +537,7 @@ ul {
 }
 .Localisation input[type=search] {
   border: none;
-  background-color: #f3f3f3;
+  background-color: #edecec;
   width: 75%;
   text-align: center;
 }
