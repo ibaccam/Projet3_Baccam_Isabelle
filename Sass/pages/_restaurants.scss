@@ -45,12 +45,12 @@
       justify-content: space-between;
       flex-direction: column;
       position: relative;
+      margin:20px 0px 20px 0px;
         @include media-min($desktop) {
           width:31%;
         }
 
       h3 {
-        
         text-transform: uppercase;
         font-weight: 370;
         font-size: 15px;
@@ -61,9 +61,9 @@
       }
   
       &--choix{
-      transform-origin:top;
+      
         padding: 10px;
-        margin: 9px;
+        margin: 7px 12px 7px 12px;
         background: $colour-white;
         animation:  0.5s ease-out both, fadein 2s both;
         position: relative;

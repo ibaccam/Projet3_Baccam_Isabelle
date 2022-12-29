@@ -110,7 +110,15 @@
       &1{
         width:100%;
         display: flex;    
-        justify-content: space-around;  
+        justify-content: space-around;
+
+        &--nombre{
+          top: 21px;}
+  
+        &--texte{
+          padding:0 4px 0px 4px;
+          font-size: 18px; 
+        }
       }
     }
   }
