@@ -1,3 +1,6 @@
+
+/* Loader */
+
 @mixin loader {
   background: #f4ebeb;
   width: 100%;
@@ -41,6 +44,7 @@
       
 }
 
+/* Fonctionnement */
 
 @mixin sélection {
   &__selection {
@@ -67,8 +71,8 @@
           background-color: $colour-primary;               
           color: #ffffff;
           position: absolute;
-          top: 25px;
-          left:-16px;
+          top: 24px;
+          left:-11px;
           padding: 5.5px 9px 5.5px 9px;
           border-radius: 50px;
           font-size: 12px;
@@ -86,14 +90,33 @@
         
     @include media-min($tablet) {
       width: 100%;
+      &1{
+        width:100%;
+        display: flex;    
+        justify-content: space-around;  
+      }
+      &--nombre{
+        top: 21px;}
+
+      &--texte{
+        padding:0 4px 0px 4px;
+        font-size: 12px; 
+      }
     }
     
     
     @include media-min($desktop) {
-      width: 23%;
+      width: 29%;
+      &1{
+        width:100%;
+        display: flex;    
+        justify-content: space-around;  
+      }
     }
   }
 }
+
+/* Button Dégradé */
 
 @mixin button {
   color: #ffffff;
@@ -112,6 +135,10 @@
     background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
 }
 
+
+
+/* Heart */
+
 @mixin heart {
     .fa-heart {
         color:black;
@@ -127,7 +154,6 @@
         }
     }
 }
-
 
 
 /* Responsive*/

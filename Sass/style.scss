@@ -85,7 +85,21 @@
 .Fonctionnement {
   
   padding: 25px 15px 25px 15px;
+  @include sélection;
       
+  
+  @include media-min($tablet) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  
+    & h2{
+      width:100%;
+      text-align: center;
+    }   
+  }
+  
+  
   @include media-min($desktop) {
       display: flex;
       align-items: center;
@@ -94,20 +108,11 @@
       & h2{
         width:100%;
         text-align: center;
-      }
-
-      &__selection1{
-        width:100%;
-        display: flex;    
-        justify-content: space-around;  
-      }
+      }     
   }
+}
 
-  @include sélection;
-
-  }
-
-/* Main */
+/* Main Liste Restaurants*/
 
 .Main{
   width:100%;

@@ -1,6 +1,11 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); /* Loader */
+/* Fonctionnement */
+/* Button Dégradé */
+/* Heart */
 /* Responsive*/
+/* Loader */
 @-webkit-keyframes custom-loading {
   0% {
     transform: rotate(0deg);
@@ -39,6 +44,7 @@
     opacity: 0;
   }
 }
+/* Heart */
 @-webkit-keyframes fill {
   0% {
     opacity: 0;
@@ -61,6 +67,7 @@
     opacity: 1;
   }
 }
+/* Menu Restaurant */
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -299,7 +306,7 @@ ul {
 }
 .Menu__info--titre {
   width: 85%;
-  font-size: 28px;
+  font-size: 26px;
   letter-spacing: 0.7px;
   font-family: "Shrikhand", cursive;
   font-weight: 700;
@@ -312,7 +319,7 @@ ul {
 }
 .Menu__info--heart {
   font-size: 28px;
-  margin: 0px 40px 0px 40px;
+  margin: 0px 25px 0px 25px;
 }
 .Menu__info--heart .fa-heart {
   color: black;
@@ -359,8 +366,8 @@ ul {
 }
 .Menu__card--choix {
   transform-origin: top;
-  padding: 11px;
-  margin: 11px;
+  padding: 10px;
+  margin: 9px;
   background: #FFF;
   -webkit-animation: 0.5s ease-out both, fadein 2s both;
           animation: 0.5s ease-out both, fadein 2s both;
@@ -368,6 +375,11 @@ ul {
   border-radius: 15px;
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
   padding-right: 15px;
+}
+.Menu__card--choix:hover h4 {
+  width: 64%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .Menu__card--choix:hover .Menu__card--choix--selection {
   opacity: 1;
@@ -379,20 +391,22 @@ ul {
   transition: transform 500ms ease-in-out;
 }
 .Menu__card--choix:hover .Menu__card--choix--inline {
-  width: 90%;
+  width: 83%;
   transition: all 0.5s cubic-bezier(0.1, 0, 0.2, 1);
 }
 .Menu__card--choix:hover p {
-  width: 75%;
+  width: 82%;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .Menu__card--choix h4 {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 500;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
   margin: 0%;
+  width: 87%;
 }
 .Menu__card--choix--1 {
   -webkit-animation-delay: 546ms;
@@ -418,14 +432,15 @@ ul {
 }
 .Menu__card--choix--inline p {
   font-weight: 350;
-  font-size: 16px;
+  font-size: 15px;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
   margin: 0%;
+  width: 85%;
 }
 .Menu__card--choix--inline span {
-  margin-right: 20px;
-  font-size: 0.95rem;
+  font-size: 16px;
   color: #464646;
 }
 .Menu__card--choix--selection {
@@ -433,7 +448,7 @@ ul {
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
-  width: 55px;
+  width: 58px;
   height: 100%;
   position: absolute;
   right: -50px;
@@ -460,7 +475,7 @@ ul {
   transition: transform 400ms;
   box-shadow: 0 6px 8px 0 grey;
   background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  width: 50%;
+  width: 60%;
   padding: 15px;
   text-align: center;
 }
@@ -591,22 +606,6 @@ ul {
 .Fonctionnement {
   padding: 25px 15px 25px 15px;
 }
-@media screen and (min-width: 992px) {
-  .Fonctionnement {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .Fonctionnement h2 {
-    width: 100%;
-    text-align: center;
-  }
-  .Fonctionnement__selection1 {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
-}
 .Fonctionnement__selection {
   display: flex;
   align-items: center;
@@ -631,8 +630,8 @@ ul {
   background-color: #9356DC;
   color: #ffffff;
   position: absolute;
-  top: 25px;
-  left: -16px;
+  top: 24px;
+  left: -11px;
   padding: 5.5px 9px 5.5px 9px;
   border-radius: 50px;
   font-size: 12px;
@@ -649,14 +648,53 @@ ul {
   .Fonctionnement__selection {
     width: 100%;
   }
+  .Fonctionnement__selection1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .Fonctionnement__selection--nombre {
+    top: 21px;
+  }
+  .Fonctionnement__selection--texte {
+    padding: 0 4px 0px 4px;
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 992px) {
   .Fonctionnement__selection {
-    width: 23%;
+    width: 29%;
+  }
+  .Fonctionnement__selection1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Fonctionnement {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .Fonctionnement h2 {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .Fonctionnement {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .Fonctionnement h2 {
+    width: 100%;
+    text-align: center;
   }
 }
 
-/* Main */
+/* Main Liste Restaurants*/
 .Main {
   width: 100%;
   height: 1300px;

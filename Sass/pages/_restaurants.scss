@@ -12,7 +12,7 @@
       
       &--titre{
         width:85%;
-        font-size: 28px;
+        font-size: 26px;
         letter-spacing: 0.7px;
         font-family: "Shrikhand", cursive;
         font-weight: 700;
@@ -25,7 +25,7 @@
   
       &--heart{
         font-size: 28px;
-        margin: 0px 40px 0px 40px;
+        margin: 0px 25px 0px 25px;
         @include heart;
       }
     }
@@ -62,8 +62,8 @@
   
       &--choix{
       transform-origin:top;
-        padding: 11px;
-        margin: 11px;
+        padding: 10px;
+        margin: 9px;
         background: $colour-white;
         animation:  0.5s ease-out both, fadein 2s both;
         position: relative;
@@ -72,6 +72,11 @@
         padding-right: 15px;
   
             &:hover {
+              & h4{
+                width:64%;
+                text-overflow: ellipsis;
+                white-space: nowrap;}
+              
               & .Menu__card--choix--selection{
                 opacity: 1;
                 transform: translate(-3rem);
@@ -84,23 +89,25 @@
               }
   
               & .Menu__card--choix--inline {
-                width :90%;
+                width :83%;
                 transition: all 0.5s cubic-bezier(0.1, 0, 0.2, 1);
               }
                 
                 p{
-                  width:75%;
+                  width:82%;
                   text-overflow: ellipsis;
                   white-space: nowrap;
                 }
             }       
   
         h4 {
-          font-size: 19px;
+          font-size: 18px;
           font-weight: 500;
           text-overflow: ellipsis;
           overflow: hidden;
+          white-space: nowrap;
           margin: 0%;
+          width:87%;
         }
   
         &--1 {
@@ -130,15 +137,16 @@
   
           p {
             font-weight: 350;
-            font-size: 16px;
+            font-size: 15px;
             text-overflow: ellipsis;
             overflow: hidden;
+            white-space: nowrap;
             margin:0%;
-            
+            width:85%;            
           }
           span {
-            margin-right: 20px;
-            font-size: .95rem;
+            
+            font-size: 16px;
             color: darken($colour-light-grey, 70%);
           }
         }    
@@ -148,7 +156,7 @@
           justify-content: center;
           align-items: center;
           background-color: #99E2D0;
-          width: 55px;
+          width: 58px;
           height: 100%;
           position: absolute;
           right: -50px;
@@ -175,7 +183,7 @@
     &__button--commander {
       @include button;
       @include dégradé;
-      width: 50%;
+      width: 60%;
       padding: 15px;
       text-align: center;  
       @include media-min($desktop) {
