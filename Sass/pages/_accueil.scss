@@ -22,23 +22,33 @@
         flex-wrap: wrap;
         justify-content: center;
         
-        @include media-min($desktop) {
+        @include media-min($tablet) {
           display: flex;
           height:75%;
           align-items: center;
           justify-content: space-around;
           margin:20px 0px 20px 0px;
         }
+        @include media-min($desktop) {
+          display: flex;
+          height:80%;
+          align-items: center;
+          justify-content: space-around;
+          margin:20px 0px 20px 0px;
+        }
       }
-      
-  
+        
       &__Liste a {
         width:94%;
         height:265px;
         margin:15px;
-        
-        @include media-min($desktop) {
+                
+        @include media-min($tablet) {
           width: 38%;
+          height:55%;
+        }
+        @include media-min($desktop) {
+          width: 22%;
           height:55%;
         }
       }
@@ -60,6 +70,13 @@
               border-radius: 20px 20px 0px 0px;
               height:72%;
               position: relative;
+
+                @include media-min($tablet) {
+                  height:69%;
+                }
+                @include media-min($desktop) {
+                  height:69%;
+                }
               }
         
               &__Card--image img {
