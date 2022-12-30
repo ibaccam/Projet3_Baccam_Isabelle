@@ -44,7 +44,7 @@
         margin:15px;
                 
         @include media-min($tablet) {
-          width: 38%;
+          width: 44%;
           height:55%;
         }
         @include media-min($desktop) {
@@ -94,7 +94,7 @@
                 color: #278870;
                 background: #99e2d0;
                 text-align: center;
-                padding: 5px 10px 5px 10px;
+                padding: 6px 5px 6px 5px;
                 margin: 8px;
                 font-size: 8px;
                 font-weight: 500;

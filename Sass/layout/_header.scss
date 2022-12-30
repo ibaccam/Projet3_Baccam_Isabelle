@@ -19,9 +19,15 @@
     }
   
     &__arrow {
-        font-size: 1.3rem;
+        font-size: 25px;
         position: absolute;
         left: 10%;
+        @include media-min($tablet) {
+          font-size: 35px;
+          }
+        @include media-min($desktop) {
+          font-size: 40px;
+          }
     }
   
     img{

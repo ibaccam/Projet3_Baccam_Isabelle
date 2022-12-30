@@ -91,7 +91,7 @@
 }
 
 #bloc-page {
-  max-width: 768px;
+  max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -133,9 +133,19 @@ ul {
   font-weight: 300;
 }
 .Header__arrow {
-  font-size: 1.3rem;
+  font-size: 25px;
   position: absolute;
   left: 10%;
+}
+@media screen and (min-width: 768px) {
+  .Header__arrow {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .Header__arrow {
+    font-size: 40px;
+  }
 }
 .Header img {
   width: 100%;
@@ -224,7 +234,7 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .Restaurants__Liste a {
-    width: 38%;
+    width: 44%;
     height: 55%;
   }
 }
@@ -275,7 +285,7 @@ ul {
   color: #278870;
   background: #99e2d0;
   text-align: center;
-  padding: 5px 10px 5px 10px;
+  padding: 6px 5px 6px 5px;
   margin: 8px;
   font-size: 8px;
   font-weight: 500;
@@ -329,28 +339,23 @@ ul {
 .Menu__info {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 @media screen and (min-width: 992px) {
   .Menu__info {
-    width: 99%;
+    margin: 20px;
   }
 }
 .Menu__info--titre {
-  width: 85%;
   font-size: 26px;
   letter-spacing: 0.7px;
   font-family: "Shrikhand", cursive;
   font-weight: 700;
   margin: 12px;
 }
-@media screen and (min-width: 992px) {
-  .Menu__info--titre {
-    width: 100%;
-  }
-}
 .Menu__info--heart {
   font-size: 28px;
-  margin: 0px 25px 0px 25px;
+  margin: 0px 28px 0px 28px;
 }
 .Menu__info--heart .fa-heart {
   color: black;
@@ -365,6 +370,11 @@ ul {
           background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .Menu__info--heart {
+    margin: 0px 32px 0px 32px;
+  }
 }
 @media screen and (min-width: 992px) {
   .Menu__liste {
@@ -405,7 +415,11 @@ ul {
   position: relative;
   border-radius: 15px;
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
-  padding-right: 15px;
+}
+@media screen and (min-width: 992px) {
+  .Menu__card--choix {
+    margin: 12px;
+  }
 }
 .Menu__card--choix:hover h4 {
   width: 64%;
@@ -473,6 +487,7 @@ ul {
 .Menu__card--choix--inline span {
   font-size: 16px;
   color: #464646;
+  padding: 0px 6px 0px 6px;
 }
 .Menu__card--choix--selection {
   display: flex;
@@ -501,22 +516,18 @@ ul {
   color: #ffffff;
   font-size: 16px;
   border-radius: 25px;
-  padding: 12px 25px 12px 25px;
+  padding: 16px 25px 16px 25px;
   transform: scale(1);
   transition: transform 400ms;
-  box-shadow: 0 6px 8px 0 grey;
-  background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  width: 60%;
-  padding: 15px;
+  width: 230px;
+  box-shadow: 0 6px 8px 0 rgb(163, 162, 162);
+  background: linear-gradient(-5deg, #9356DC 9%, #b35cdc, #cf64dc, #e86edb, #FF79DA);
   text-align: center;
 }
 .Menu__button--commander:hover {
   transform: scale(1.1);
-}
-@media screen and (min-width: 992px) {
-  .Menu__button--commander {
-    width: 20%;
-  }
+  opacity: 0.7;
+  box-shadow: 0 6px 8px 0 black;
 }
 
 /* Loader */
@@ -627,14 +638,17 @@ ul {
   color: #ffffff;
   font-size: 16px;
   border-radius: 25px;
-  padding: 12px 25px 12px 25px;
+  padding: 16px 25px 16px 25px;
   transform: scale(1);
   transition: transform 400ms;
-  box-shadow: 0 6px 8px 0 grey;
-  background: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  width: 230px;
+  box-shadow: 0 6px 8px 0 rgb(163, 162, 162);
+  background: linear-gradient(-5deg, #9356DC 9%, #b35cdc, #cf64dc, #e86edb, #FF79DA);
 }
 .Description__button--menu:hover {
   transform: scale(1.1);
+  opacity: 0.7;
+  box-shadow: 0 6px 8px 0 black;
 }
 
 /* Fonctionnement */
@@ -682,6 +696,7 @@ ul {
 @media screen and (min-width: 768px) {
   .Fonctionnement__selection {
     width: 100%;
+    padding: 9px 11px;
   }
   .Fonctionnement__selection1 {
     width: 100%;
@@ -689,7 +704,7 @@ ul {
     justify-content: space-around;
   }
   .Fonctionnement__selection--nombre {
-    top: 21px;
+    top: 20px;
   }
   .Fonctionnement__selection--texte {
     padding: 0 4px 0px 4px;
@@ -706,11 +721,11 @@ ul {
     justify-content: space-around;
   }
   .Fonctionnement__selection--nombre {
-    top: 28px;
+    top: 24px;
   }
   .Fonctionnement__selection--texte {
     padding: 0 11px 0px 11px;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -718,6 +733,18 @@ ul {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    padding: 25px 10px 25px 10px;
+  }
+  .Fonctionnement h2 {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .Fonctionnement {
+    width: 992px;
+    margin: auto;
+    padding: 25px 10px 25px 10px;
   }
   .Fonctionnement h2 {
     width: 100%;
