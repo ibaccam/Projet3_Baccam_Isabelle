@@ -247,13 +247,8 @@ ul {
 .Restaurants__Card {
   height: 100%;
   border-radius: 20px;
-  background-color: white;
+  background-color: #ffffff;
   box-shadow: 5px 2px 10px 2px #f0f2f6;
-  transform: scale(1);
-  transition: transform 400ms;
-}
-.Restaurants__Card:hover {
-  transform: scale(1.1);
 }
 .Restaurants__Card--image {
   border-radius: 20px 20px 0px 0px;
@@ -314,7 +309,7 @@ ul {
   justify-content: center;
 }
 .Restaurants__Card--descriptif--heart .fa-heart {
-  color: black;
+  color: #000;
   font-size: 25px;
   font-weight: 100;
 }
@@ -358,7 +353,7 @@ ul {
   margin: 0px 28px 0px 28px;
 }
 .Menu__info--heart .fa-heart {
-  color: black;
+  color: #000;
   font-size: 25px;
   font-weight: 100;
 }
@@ -409,7 +404,7 @@ ul {
 .Menu__card--choix {
   padding: 10px;
   margin: 7px 12px 7px 12px;
-  background: #FFF;
+  background: #ffffff;
   -webkit-animation: 0.5s ease-out both, fadein 2s both;
           animation: 0.5s ease-out both, fadein 2s both;
   position: relative;
@@ -510,22 +505,19 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 37px;
 }
 .Menu__button--commander {
   color: #ffffff;
   font-size: 16px;
   border-radius: 25px;
-  padding: 16px 25px 16px 25px;
-  transform: scale(1);
-  transition: transform 400ms;
-  width: 230px;
+  padding: 17px;
+  width: 220px;
   box-shadow: 0 6px 8px 0 rgb(163, 162, 162);
   background: linear-gradient(-5deg, #9356DC 9%, #b35cdc, #cf64dc, #e86edb, #FF79DA);
   text-align: center;
 }
 .Menu__button--commander:hover {
-  transform: scale(1.1);
   opacity: 0.7;
   box-shadow: 0 6px 8px 0 black;
 }
@@ -603,17 +595,17 @@ ul {
   text-align: center;
 }
 .Localisation ::-moz-placeholder {
-  color: #000000;
+  color: #000;
   font-size: 16px;
   font-weight: 500;
 }
 .Localisation :-ms-input-placeholder {
-  color: #000000;
+  color: #000;
   font-size: 16px;
   font-weight: 500;
 }
 .Localisation ::placeholder {
-  color: #000000;
+  color: #000;
   font-size: 16px;
   font-weight: 500;
 }
@@ -638,15 +630,13 @@ ul {
   color: #ffffff;
   font-size: 16px;
   border-radius: 25px;
-  padding: 16px 25px 16px 25px;
-  transform: scale(1);
-  transition: transform 400ms;
-  width: 230px;
+  padding: 17px;
+  width: 220px;
   box-shadow: 0 6px 8px 0 rgb(163, 162, 162);
   background: linear-gradient(-5deg, #9356DC 9%, #b35cdc, #cf64dc, #e86edb, #FF79DA);
+  margin: 17px;
 }
 .Description__button--menu:hover {
-  transform: scale(1.1);
   opacity: 0.7;
   box-shadow: 0 6px 8px 0 black;
 }
@@ -658,18 +648,15 @@ ul {
 .Fonctionnement__selection {
   display: flex;
   align-items: center;
-  background: #f6f6f6;
+  background: rgb(248, 248, 248);
   width: 94%;
   margin: 25px 15px 25px 15px;
   border-radius: 20px;
   position: relative;
   padding: 9px 25px;
   box-shadow: 0 6px 8px 0 gainsboro;
-  transform: scale(1);
-  transition: transform 400ms;
 }
 .Fonctionnement__selection:hover {
-  transform: scale(1.1);
   background-color: rgba(194, 180, 237, 0.3);
 }
 .Fonctionnement__selection:hover i {

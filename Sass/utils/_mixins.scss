@@ -50,17 +50,14 @@
   &__selection {
     display: flex;
     align-items: center;
-    background: #f6f6f6;
+    background: $colour-light-grey;
     width: 94%;
     margin: 25px 15px 25px 15px;
     border-radius: 20px;
     position: relative;
     padding:9px 25px;
-    box-shadow: 0 6px 8px 0 gainsboro;
-    transform: scale(1);                      
-    transition: transform 400ms;
+    box-shadow: 0 6px 8px 0 gainsboro;      
       &:hover {
-        transform: scale(1.1);
         background-color: rgba(194, 180, 237, 0.3);
         i {
           color: $colour-primary;              
@@ -69,7 +66,7 @@
          
         &--nombre{
           background-color: $colour-primary;               
-          color: #ffffff;
+          color: $colour-white;
           position: absolute;
           top: 24px;
           left:-11px;
@@ -134,16 +131,13 @@
 /* Button Dégradé */
 
 @mixin button {
-  color: #ffffff;
+  color: $colour-white;
   font-size: 16px;
   border-radius: 25px;
-  padding:16px 25px 16px 25px;
-  transform: scale(1);                  
-  transition: transform 400ms;
-  width:230px;
+  padding:17px;
+  width:220px;
   box-shadow: 0 6px 8px 0 rgb(163, 162, 162);
     &:hover {
-      transform: scale(1.1);      
       opacity:0.7;
       box-shadow: 0 6px 8px 0 darken(rgb(163, 162, 162),80%);
     }
@@ -151,7 +145,7 @@
     
 
 @mixin dégradé {
-    background: linear-gradient(-5deg, #9356DC 9%, #b35cdc, #cf64dc, #e86edb, #FF79DA);
+    background: linear-gradient(-5deg, $colour-primary 9%, #b35cdc, #cf64dc, #e86edb, $colour-secondary);
 }
 
 
@@ -161,7 +155,7 @@
 
 @mixin heart {
     .fa-heart {
-        color:black;
+        color:$colour-black;
         font-size: 25px;
         font-weight: 100;
             
