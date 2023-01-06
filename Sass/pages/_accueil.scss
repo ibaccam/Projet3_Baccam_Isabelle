@@ -69,7 +69,6 @@
 /* Fonctionnement */
 
 .Fonctionnement {
-  
   padding: 25px 15px 25px 15px;
   @include sélection;
       
@@ -79,6 +78,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 25px 10px 25px 10px;
+    max-width:992px;
   
     & h2{
       width:100%;
@@ -86,7 +86,7 @@
     }   
   }
   @include media-min($desktop) {
-    width:992px;
+    max-width:992px;
     margin:auto; 
     padding: 25px 10px 25px 10px;
   

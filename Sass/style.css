@@ -380,6 +380,7 @@ ul {
     align-items: center;
     flex-wrap: wrap;
     padding: 25px 10px 25px 10px;
+    max-width: 992px;
   }
   .Fonctionnement h2 {
     width: 100%;
@@ -388,7 +389,7 @@ ul {
 }
 @media screen and (min-width: 992px) {
   .Fonctionnement {
-    width: 992px;
+    max-width: 992px;
     margin: auto;
     padding: 25px 10px 25px 10px;
   }
