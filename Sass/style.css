@@ -240,10 +240,6 @@ ul {
   box-shadow: inset 2px 7px 9px -9px rgba(115, 115, 115, 0.75);
   padding: 20px;
 }
-.Localisation__titre {
-  visibility: hidden;
-  display: none;
-}
 .Localisation__recherche {
   display: flex;
   justify-content: center;
@@ -715,6 +711,7 @@ ul {
 }
 .Menu__card--choix--inline span {
   font-size: 16px;
+  font-weight: bold;
   color: #464646;
   padding: 0px 6px 0px 6px;
 }
