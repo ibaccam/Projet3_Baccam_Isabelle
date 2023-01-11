@@ -90,6 +90,11 @@
   color: #000000;
 }
 
+body {
+  width: 100%;
+  margin: 0%;
+}
+
 #bloc-page {
   max-width: 1440px;
   margin-right: auto;
