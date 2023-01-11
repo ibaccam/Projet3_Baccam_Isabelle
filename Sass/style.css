@@ -138,9 +138,10 @@ ul {
   font-weight: 300;
 }
 .Header__arrow {
-  font-size: 25px;
+  font-size: 23px;
   position: absolute;
-  left: 10%;
+  left: 7%;
+  top: 3%;
 }
 @media screen and (min-width: 768px) {
   .Header__arrow {
@@ -667,22 +668,22 @@ ul {
   transition: transform 500ms ease-in-out;
 }
 .Menu__card--choix:hover .Menu__card--choix--inline {
-  width: 83%;
+  width: 82%;
   transition: all 0.5s cubic-bezier(0.1, 0, 0.2, 1);
 }
 .Menu__card--choix:hover p {
-  width: 82%;
+  width: 77%;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .Menu__card--choix h4 {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 500;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   margin: 0%;
-  width: 87%;
+  width: 85%;
 }
 .Menu__card--choix--1 {
   -webkit-animation-delay: 546ms;
@@ -705,6 +706,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   line-height: 1.5em;
+  width: 99%;
 }
 .Menu__card--choix--inline p {
   font-weight: 350;
@@ -713,20 +715,21 @@ ul {
   overflow: hidden;
   white-space: nowrap;
   margin: 0%;
-  width: 85%;
+  width: 86%;
+  letter-spacing: 0.4px;
 }
 .Menu__card--choix--inline span {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   color: #464646;
-  padding: 0px 6px 0px 6px;
+  padding: 0px 9px 0px 9px;
 }
 .Menu__card--choix--selection {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
-  width: 58px;
+  width: 62px;
   height: 100%;
   position: absolute;
   right: -50px;

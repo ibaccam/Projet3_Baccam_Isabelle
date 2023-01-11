@@ -95,25 +95,25 @@
               }
   
               & .Menu__card--choix--inline {
-                width :83%;
+                width :82%;
                 transition: all 0.5s cubic-bezier(0.1, 0, 0.2, 1);
               }
                 
                 p{
-                  width:82%;
+                  width:77%;
                   text-overflow: ellipsis;
                   white-space: nowrap;
                 }
             }       
   
         h4 {
-          font-size: 18px;
+          font-size: 19px;
           font-weight: 500;
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
           margin: 0%;
-          width:87%;
+          width:85%;
         }
   
         &--1 {
@@ -139,6 +139,9 @@
           justify-content: space-between;
           align-items: center;
           line-height: 1.5em;
+          width:99%;
+          
+
   
   
           p {
@@ -148,13 +151,16 @@
             overflow: hidden;
             white-space: nowrap;
             margin:0%;
-            width:85%;            
+            width: 86%;
+            letter-spacing:0.4px;
+            
+                      
           }
           span {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
             color: darken($colour-light-grey, 70%);
-            padding: 0px 6px 0px 6px;
+            padding: 0px 9px 0px 9px;
           }
         }    
     
@@ -163,7 +169,7 @@
           justify-content: center;
           align-items: center;
           background-color: #99E2D0;
-          width: 58px;
+          width: 62px;
           height: 100%;
           position: absolute;
           right: -50px;
